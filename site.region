@@ -35,8 +35,8 @@
 
       {.section website}
 
+        <div data-hull-component="identity@hull" style="float:right"></div>
         <h1 data-content-field="site-title">
-          <div data-hull-component="identity@hull" style="float:right"></div>
           <a href="/">
             {.section logoImageUrl}
              <img src="{logoImageUrl}?format=original" alt="{siteTitle}" />
