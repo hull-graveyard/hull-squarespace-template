@@ -41,19 +41,15 @@
 
       <!--HEADER-->
 
-      <header id="header">
+      <squarespace:navigation navigationId="mainNav" template="navigation" />
 
-        <!--SITE TITLE OR LOGO-->
-
-        <!--MAIN NAVIGATION-->
-
-        <squarespace:navigation navigationId="mainNav" template="navigation" />
-
-      </header>
+      <section class="hero-unit">
+        <h2 data-hull-component="my-component"></h2>
+      </section>
 
       <!--CONTENT INJECTION POINT-->
 
-      <section id="content">    
+      <section id="content">
        {squarespace.main-content}
       </section>
 
