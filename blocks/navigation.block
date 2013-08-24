@@ -12,7 +12,7 @@
     <ul class="nav">
       {.repeated section items}
 
-          <li class="{.section active} active-link{.end}{.if folderActive} active-folder{.end}">
+          <li class="{.section active}active active-link{.end}{.if folderActive} active-folder{.end}">
 
             {.folder?}
 
