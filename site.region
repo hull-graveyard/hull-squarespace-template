@@ -18,8 +18,8 @@
     <!-- Hull Init -->
     <script>
       Hull.init({
-        appId: "5217633d0fb8a365e000000e",
-        orgUrl: "https://153e644e.hullapp.io",
+        appId: "xxxxxxxxxxxxxxx",
+        orgUrl: "https://xxxxx.hullapp.io",
         sources: { default: '/assets/hull_components' },
         debug: true //optional
       }, function() {
