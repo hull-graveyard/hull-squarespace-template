@@ -9,16 +9,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
     <!--INCLUDE SQS SCRIPTS, META TAGS AND USER CONTENT FROM THE CODE INJECTION TAB-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://d3f5pyioow99x0.cloudfront.net/develop/hull.js"></script>
-    <script>
-      Hull.init({
-        appId: "5217633d0fb8a365e000000e",
-        orgUrl: "https://153e644e.hullapp.io"
-      }, function() {
-        console.warn("Hull init ok");
-      });
-    </script>
     {squarespace-headers}
 
     <squarespace:script src="site.js" combo="true" />
@@ -34,8 +24,6 @@
       <!--SITE TITLE OR LOGO-->
 
       {.section website}
-
-        <div data-hull-component="identity@hull" style="float:right"></div>
         <h1 data-content-field="site-title">
           <a href="/">
             {.section logoImageUrl}
@@ -45,7 +33,8 @@
             {.end}
           </a>
         </h1>
-        
+
+
         <!--SITE TAGLINE-->
 
         {.section siteTagLine}<p>{@}</p>{.end}
@@ -56,6 +45,7 @@
 
       <squarespace:navigation navigationId="mainNav" template="navigation" />
 
+      <div data-hull-component="identity@hull" style="float:right"></div>
     </header>
 
     <!--CONTENT INJECTION POINT-->
