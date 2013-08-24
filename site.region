@@ -20,6 +20,7 @@
       Hull.init({
         appId: "5217633d0fb8a365e000000e",
         orgUrl: "https://153e644e.hullapp.io",
+        sources: { default: '/assets/hull_components' }
         debug: true //optional
       }, function() {
         console.warn("Hull init ok"); // optional
@@ -48,7 +49,6 @@
 
         <squarespace:navigation navigationId="mainNav" template="navigation" />
 
-        <div data-hull-component="identity@hull" style="float:right"></div>
       </header>
 
       <!--CONTENT INJECTION POINT-->

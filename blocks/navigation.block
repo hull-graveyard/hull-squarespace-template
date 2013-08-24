@@ -9,65 +9,68 @@
         {.end}
       </a>
     {.end}
-    <ul class="nav">
-      {.repeated section items}
+    <div class="nav-collapse collapse navbar-responsive-collapse">
+      <ul class="nav">
+        {.repeated section items}
 
-          <li class="{.section active}active active-link{.end}{.if folderActive} active-folder{.end}">
+            <li class="{.section active}active active-link{.end}{.if folderActive} active-folder{.end}">
 
-            {.folder?}
+              {.folder?}
 
-              <!--FOLDER-->
+                <!--FOLDER-->
 
-                <a href="{collection.fullUrl}">{collection.navigationTitle}</a>
+                  <a href="{collection.fullUrl}">{collection.navigationTitle}</a>
 
-                <ul>
+                  <ul>
 
-                  {.repeated section items}
+                    {.repeated section items}
 
-                    <!--COLLECTION IN A FOLDER-->
+                      <!--COLLECTION IN A FOLDER-->
 
-                    {.collection?}
-                      <li class="{.section active} active-link{.end}">
-                        <a href="{collection.fullUrl}">
-                          {collection.navigationTitle}
-                        </a>
-                      </li>
+                      {.collection?}
+                        <li class="{.section active} active-link{.end}">
+                          <a href="{collection.fullUrl}">
+                            {collection.navigationTitle}
+                          </a>
+                        </li>
+                      {.end}
+
+                      <!--EXTERNAL LINK IN A FOLDER-->
+
+                      {.section externalLink}
+                        <li>
+                          <a href="{url}"{.section newWindow} target="_blank"{.end}>
+                            {title}
+                          </a>
+                        </li>
+                      {.end}
                     {.end}
 
-                    <!--EXTERNAL LINK IN A FOLDER-->
+                  </ul>
+                  
+              {.or}
 
-                    {.section externalLink}
-                      <li>
-                        <a href="{url}"{.section newWindow} target="_blank"{.end}>
-                          {title}
-                        </a>
-                      </li>
-                    {.end}
-                  {.end}
+                <!--COLLECTION-->
 
-                </ul>
-                
-            {.or}
+                {.section collection}
+                  <a href="{fullUrl}">{navigationTitle}</a>
+                {.end}
 
-              <!--COLLECTION-->
+                <!--EXTERNAL LINK-->
 
-              {.section collection}
-                <a href="{fullUrl}">{navigationTitle}</a>
+                {.section externalLink}
+                  <a href="{url}"{.section newWindow} target="_blank"{.end}>
+                    {title}
+                  </a>
+                {.end}
+
               {.end}
 
-              <!--EXTERNAL LINK-->
-
-              {.section externalLink}
-                <a href="{url}"{.section newWindow} target="_blank"{.end}>
-                  {title}
-                </a>
-              {.end}
-
-            {.end}
-
-          </li>
-          
-      {.end}
-    </ul>
+            </li>
+            
+        {.end}
+      </ul>
+      <ul class="nav pull-right" data-hull-component="identity@hull"></ul>
+    </div>
   </div>
 </div>
